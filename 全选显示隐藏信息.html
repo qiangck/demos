@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>全选显示隐藏信息</title>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<span class="hideDiv" style="display:none"></span>
+		<p><button id="qw">全文</button></p>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var str = "等级低洼降低挖掘的外交到位顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶东东弟弟顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶弟弟顶顶顶顶顶等级低洼降低挖掘的外交到位顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶东东弟弟顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶弟弟顶顶顶顶顶等级低洼降低挖掘的外交到位顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶东东弟弟顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶弟弟顶顶顶顶顶等级低洼降低挖掘的外交到位顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶东东弟弟顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶弟弟顶顶顶顶顶等级低洼降低挖掘的外交到位顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶东东弟弟顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶";
+			var qw = $('#qw');
+			var hideDiv = $('.hideDiv');
+			var content = $('#content');
+			function render (str) {
+				if(str.length >= 60){
+					content.prepend('<span>'+str.substring(0,50)+'</span>');
+					hideDiv.html(str.substring(50));
+				}else{
+					content.append('<p>'+str+'</p>');
+				}
+			}
+			qw.on('click',function(){
+				hideDiv.toggle();
+			});
+			render(str)
+		})
+		
+	</script>
+</body>
+</html>

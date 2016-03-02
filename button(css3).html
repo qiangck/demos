@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        .switch{width: 180px;height: 50px;position: relative;}
+        .switch input{top: 0;right: 0;bottom: 0;left: 0;opacity: 0;z-index: 100;position: absolute;width: 100%;height: 100%;cursor: pointer;}
+        .switch label{position: relative;display: block;width: 100%;height: 100%;box-shadow: inset 0 3px 8px 1px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.5);border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border: 1px solid #eee;}
+        .switch label i{display: block;height: 100%;width: 50%;border-radius: inherit;background: silver;position: absolute;z-index: 2;right: 50%;top: 0;background: #18B568;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;}
+        .switch label i:before{content: "关";font-style: normal;color: rgba(0,0,0,0.4);font-family: "Microsoft YaHei";font-size: 24px;position: absolute;top: 50%;margin-top: -16px;right: -50%;}
+        .switch label i:after{content: "";position: absolute;left: 15%;top: 25%;width: 70%;height: 50%;}
+        .switch input:checked ~ label i{right: -1%;}
+        .switch input:checked ~ label i:before{content: "开";right: 115%;}
+    </style>
+</head>
+<body>
+    <div class="switch">
+        <input type="checkbox">
+        <label><i></i></label>
+    </div>
+</body>
+</html>

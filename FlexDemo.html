@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flex布局</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0}
+        body{background: #ccc;}
+        p{font-size: 16px;font-family: 'Microsoft YaHei';color: #fff;text-align: center;}
+        .warp{height: 400px;}
+        .box {border: 1px solid #ddd;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;height: 150px;width: 150px;background: #fff;margin: 15px;box-shadow:0 0 10px #222;-webkit-box-shadow:0 0 10px #222;-moz-box-shadow:0 0 10px #222;display: flex;float: left;}
+        .box .item{-webkit-border-radius: 25px;-moz-border-radius: 25px;border-radius: 25px;height: 35px;width: 35px;background: #000;}
+        .two{justify-content: center;}
+        .three{justify-content: flex-end;}
+        .four{align-items: center;}
+        .five{align-items: center;justify-content: center;}
+        .six{align-items: flex-end;justify-content: center;}
+        .seven{align-items: flex-end;justify-content: flex-end;}
+        .one_1{justify-content: space-between;}
+        .two_2{justify-content: space-between;flex-direction: column;}
+        .three_3{justify-content: space-between;align-items: center;flex-direction: column;}
+        .four_4{justify-content: space-between;align-items: flex-end;flex-direction: column;}
+        .Site{display: flex;min-height: 100vh;flex-direction: column;}
+        .Site-content {flex: 1;}
+        header,footer{height: 60px;width: 100%;background: #000;padding-top: 15px;}
+    </style>
+</head>
+<body  class="Site">
+<header><p>这是一个头部</p></header>
+<main class="Site-content">
+    <div class="warp">
+        <div class="box one">
+            <span class="item"></span>
+        </div>
+        <div class="box two">
+            <span class="item"></span>
+        </div>
+        <div class="box three">
+            <span class="item"></span>
+        </div>
+        <div class="box four">
+            <span class="item"></span>
+        </div>
+        <div class="box five">
+            <span class="item"></span>
+        </div>
+        <div class="box six">
+            <span class="item"></span>
+        </div>
+        <div class="box one_1">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="box two_2">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="box three_3">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="box four_4">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+</main>
+<footer>
+<p>这是一个固定的底栏</p>
+<p>有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部</p>
+</footer>
+</body>
+</html>
